@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Preview Youtube View Controller-->
+        <scene sceneID="Fdh-hO-BRY">
+            <objects>
+                <viewController storyboardIdentifier="youview" modalTransitionStyle="flipHorizontal" modalPresentationStyle="overCurrentContext" id="w9o-l3-Piv" customClass="previewYoutubeViewController" customModule="AnimeInformationS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DMC-ep-t5O"/>
+                        <viewControllerLayoutGuide type="bottom" id="qiO-U5-l5e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aDQ-qJ-hIU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvg-3J-9Wg">
+                                <rect key="frame" x="0.0" y="69" width="375" height="598"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nx7-nS-Jx0">
+                                <rect key="frame" x="329" y="28" width="30" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Exit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dissmissModal:" destination="w9o-l3-Piv" eventType="touchUpInside" id="nx1-WG-TLc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.90295911817123287" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qiO-U5-l5e" firstAttribute="top" secondItem="zvg-3J-9Wg" secondAttribute="bottom" id="0UJ-X0-KSp"/>
+                            <constraint firstItem="zvg-3J-9Wg" firstAttribute="top" secondItem="Nx7-nS-Jx0" secondAttribute="bottom" constant="8" id="QdU-F9-KOP"/>
+                            <constraint firstItem="Nx7-nS-Jx0" firstAttribute="trailing" secondItem="aDQ-qJ-hIU" secondAttribute="trailingMargin" id="aFQ-st-a27"/>
+                            <constraint firstAttribute="trailing" secondItem="zvg-3J-9Wg" secondAttribute="trailing" id="nv6-bP-0Jf"/>
+                            <constraint firstItem="zvg-3J-9Wg" firstAttribute="leading" secondItem="aDQ-qJ-hIU" secondAttribute="leading" id="pdr-7j-Wbs"/>
+                            <constraint firstItem="Nx7-nS-Jx0" firstAttribute="top" secondItem="DMC-ep-t5O" secondAttribute="bottom" constant="8" id="wbJ-cu-mnr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="exitButton" destination="Nx7-nS-Jx0" id="YRQ-xM-kJ2"/>
+                        <outlet property="webView" destination="zvg-3J-9Wg" id="ZU1-OD-i42"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z1g-1H-ZIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-170.40000000000001" y="-65.217391304347828"/>
+        </scene>
+    </scenes>
+</document>
